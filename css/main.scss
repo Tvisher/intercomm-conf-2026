@@ -112,6 +112,10 @@ body {
   top: 0;
   padding: 30px 0;
   background-color: #fff;
+  transition: box-shadow 0.3s ease-in-out;
+  &.shadow {
+    box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+  }
 }
 
 .header__wrapper {

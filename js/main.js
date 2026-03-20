@@ -15,3 +15,13 @@ const swiper = new Swiper('.speakers-slider', {
         dynamicBullets: true,
     },
 });
+
+const header = document.querySelector('.header');
+window.addEventListener('scroll', (e) => {
+    const pageYOffcet = window.pageYOffset;
+    if (pageYOffcet >= header.clientHeight) {
+        header.classList.add('shadow')
+    } else {
+        header.classList.remove('shadow')
+    }
+})
