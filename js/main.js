@@ -7,7 +7,7 @@ $('[data-toggle-item] .list-item__head').on('click', function () {
 
 
 
-const swiper = new Swiper('.speakers-slider', {
+const speakersSlider = new Swiper('.speakers-slider', {
     slidesPerView: 'auto',
     spaceBetween: 40,
     pagination: {
@@ -25,3 +25,14 @@ window.addEventListener('scroll', (e) => {
         header.classList.remove('shadow')
     }
 })
+
+
+
+const partnersSlider = new Swiper('.partners-slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 40,
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+    },
+});
