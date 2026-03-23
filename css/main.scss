@@ -475,3 +475,352 @@ body {
   font-size: 18px;
   line-height: 130%;
 }
+
+.programs {
+  padding: 90px 0;
+  .section-title {
+    margin-bottom: 40px;
+  }
+  .section-descr {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: 60px;
+  }
+}
+
+.programs-days {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.programs-day {
+  width: calc(50% - 20px);
+}
+
+.day__head {
+  padding: 7px;
+  background-color: #fff;
+  border-radius: 42px;
+  color: #24222e;
+  font-family: Gilroy;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+  span {
+    margin: 0 auto;
+  }
+}
+
+.day__open {
+  cursor: pointer;
+  padding: 6px;
+  padding-right: 36px;
+  padding-left: 92px;
+  // margin-left: auto;
+  font-size: 18px;
+  border-radius: 42px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='28' height='15' viewBox='0 0 28 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.033 14.8772C14.4001 14.8742 14.7666 14.738 15.0535 14.4651L27.533 2.58521C28.1327 2.01418 28.1564 1.06602 27.5857 0.466064C27.0145 -0.133911 26.0647 -0.157849 25.4647 0.41333L13.9988 11.3274L2.53399 0.41333C1.93395 -0.157801 0.984124 -0.133894 0.412895 0.466064C-0.15765 1.06599 -0.133944 2.0142 0.465629 2.58521L12.9451 14.4651C13.2318 14.7378 13.598 14.8739 13.9647 14.8772C13.9708 14.8774 13.977 14.878 13.9832 14.8782L14.0154 14.8782C14.0213 14.878 14.0272 14.8774 14.033 14.8772Z' fill='%2324222E'/%3e%3c/svg%3e ");
+  background-repeat: no-repeat;
+  background-size: 28px 15px;
+  background-position: center left 37px;
+}
+
+.programs-day {
+  border-radius: 42px;
+  border: 1px solid #fff;
+}
+
+.day__body {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%;
+  text-align: center;
+  padding: 19px 0px 30px;
+}
+
+.programs__descr {
+  color: #fff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  a {
+    display: inline-block;
+    margin-left: 20px;
+  }
+}
+
+.tickets {
+  padding: 90px 0;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.timer__plate {
+  padding: 30px 20px;
+  color: #24222e;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 110%;
+  background-color: #fff;
+  border-radius: 40px;
+}
+
+.timer-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.timer__nums {
+  display: flex;
+  gap: 8px;
+}
+
+.timer__num {
+  text-align: center;
+  font-weight: 500;
+
+  .num {
+    display: block;
+    width: 100px;
+    font-size: 48px;
+    padding: 7px;
+    border-radius: 25px;
+    background: #fff;
+    color: #24222e;
+    font-size: 48px;
+    line-height: 100%;
+  }
+
+  .text {
+    padding-top: 4px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 120%;
+  }
+}
+
+.tickets-wrapper {
+  padding-top: 60px;
+  display: flex;
+  gap: 30px;
+  .ticket {
+    width: calc(33.33% - 20px);
+  }
+}
+
+.ticket__head {
+  margin-top: -1px;
+  margin-left: -1px;
+  margin-right: -1px;
+  min-height: 110px;
+  border-radius: 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 110%;
+  span {
+    font-size: 18px;
+    line-height: 130%;
+  }
+}
+
+.border-wrapper {
+  height: 100%;
+  border-radius: 42px;
+  border: 1px solid #fff;
+  margin-bottom: 30px;
+}
+
+.ticket__body {
+  padding: 19px 13px;
+  padding-bottom: 27px;
+  li {
+    padding: 3px 0;
+    color: #fff;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+  }
+  ul {
+    padding-left: 20px;
+  }
+}
+.ticket-btn__days {
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.ticket-btn__text {
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%; /* 15.6px */
+}
+
+.ticket-btn__price {
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.ticket-btn {
+  border-radius: 38px;
+  background: linear-gradient(90deg, #fa36db 0%, #8f68ed 100%);
+  height: 98px;
+  &._single {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .ticket-btn__days {
+      position: absolute;
+      left: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.ticket {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  .ticket-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(50% - 10px);
+  }
+}
+
+.expo {
+  padding: 90px 0;
+}
+.expo__wrapper {
+  display: flex;
+  gap: 50px;
+}
+
+.expo__left,
+.expo__right {
+  width: calc(50% - 25px);
+}
+
+.expo__left {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.rectangle {
+  height: 143px;
+  border-radius: 50px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &:nth-child(2) {
+    border: 3px solid #6ea6ef;
+    position: relative;
+    .rectangle-ball {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 143px;
+      height: 143px;
+      background-color: #6ea6ef;
+      border-radius: 50%;
+      animation: leftToRightBall 16s ease-in infinite;
+    }
+  }
+
+  &:nth-child(3) {
+    display: flex;
+    gap: 37px;
+    .rectangle-ball {
+      width: 143px;
+      height: 143px;
+      background-color: #fa36db;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.rectangle-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  border-radius: 50px;
+  margin-left: auto;
+}
+
+@keyframes leftToRightBall {
+  0% {
+    left: 10px;
+  }
+  50% {
+    left: calc(100% - 153px);
+  }
+  100% {
+    left: 10px;
+  }
+}
+
+.expo__descr {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%;
+  padding-top: 40px;
+}
+
+.expo__right {
+  display: flex;
+  flex-direction: column;
+  .btn {
+    margin-top: auto;
+    margin-left: auto;
+  }
+}
