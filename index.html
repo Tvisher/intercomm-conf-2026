@@ -223,7 +223,40 @@
                     </section>
 
                 </div>
-                <div class="right-content"></div>
+                <div class="right-content">
+                    <form class="form-template">
+                        <div class="form-template__header">
+                            <div class="form-template__title">Лучшая цена</div>
+                            <div class="form-template__decr">до 1 июля</div>
+                        </div>
+
+                        <div class="form-template__body">
+                            <label class="form-template__field">
+                                <input type="text" name="name" placeholder="ФИО">
+                            </label>
+
+                            <label class="form-template__field">
+                                <input type="text" name="company" placeholder="Название компании">
+                            </label>
+
+                            <label class="form-template__field">
+                                <input type="text" name="email" placeholder="Электронная почта">
+                            </label>
+
+                            <label class="form-template__field">
+                                <input type="text" name="phone" placeholder="Номер телефона">
+                            </label>
+                        </div>
+                        <div class="form-template__items-count">
+                            <div class="items-count__name">Количество билетов</div>
+                            <div class="items-count__calc">
+                                <div class="calc__minus">-</div>
+                                <div class="calc__plate" data-count="1">1</div>
+                                <div class="calc__plus">+</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
         <section class="how-it-was">
@@ -633,8 +666,147 @@
                 </div>
             </div>
         </section>
+        <section class="contacts">
+            <div class="container">
+                <div class="contacts__wrapper">
+                    <div class="contacts__left">
+                        <h2 class="section-title">КОНТАКТЫ</h2>
+                        <div class="contacts-list">
+                            <div class="contact">
+                                <div class="contact__name">Партнёрское или спикерское участие </div>
+                                <div class="contact__block">
+                                    <div class="contact__block-inner">
+                                        <div class="block-inner__image"
+                                            style="background-image: url(./img/contact-image-1.jpg);"></div>
+                                        <div class="block-inner__content">
+                                            <div class="block-inner__name">Анна Андреева</div>
+                                            <div class="block-inner__descr">Генеральный директор ИнтерКомм</div>
+                                            <a href="mailto:a_smirnova@intercomm.media"
+                                                class="block-inner__val">a_smirnova@intercomm.media</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact">
+                                <div class="contact__name">Участие в конференции </div>
+                                <div class="contact__block">
+                                    <div class="contact__block-inner">
+                                        <div class="block-inner__image"
+                                            style="background-image: url(./img/contact-image-2.jpg);"></div>
+                                        <div class="block-inner__content">
+                                            <div class="block-inner__name"> Ирина Панова</div>
+                                            <div class="block-inner__descr">Менеджер по работе с участниками</div>
+                                            <a href="tel:8-926-320-83-84" class="block-inner__val">8-926-320-83-84</a>
+                                            <a href="mailto:i_panova@intercomm.media"
+                                                class="block-inner__val">i_panova@intercomm.media</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact">
+                                <div class="contact__name">Информационное партнёрство </div>
+                                <div class="contact__block">
+                                    <div class="contact__block-inner">
+                                        <div class="block-inner__image"
+                                            style="background-image: url(./img/contact-image-3.jpg);"></div>
+                                        <div class="block-inner__content">
+                                            <a href="mailto:pr@intercomm.media"
+                                                class="block-inner__val">pr@intercomm.media</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts__right"></div>
+                </div>
+                <div class="contacts__map-wrapper">
+                    <h2 class="section-title">АДРЕС</h2>
+                    <div class="contacts__map">
+                        <div class="contacts__map-inner">
+                            <div class="map-plate">
+                                <div class="map-plate__ico">
+                                    <svg width="33" height="45" viewBox="0 0 33 45" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.5 0C25.6126 0 32.9999 7.563 33 16.8926C33 26.2221 23.7907 37.3209 16.5 44.7852C9.97674 38.1065 0 26.2221 0 16.8926C9.95029e-05 7.563 7.38736 9.89459e-08 16.5 0ZM16.501 9.42969C12.5955 9.42969 9.42969 12.5955 9.42969 16.501C9.42986 20.4063 12.5956 23.5723 16.501 23.5723C20.4062 23.5721 23.5721 20.4062 23.5723 16.501C23.5723 12.5956 20.4063 9.42981 16.501 9.42969Z"
+                                            fill="#FA36DB" />
+                                    </svg>
+                                </div>
+
+                                <div class="map-plate__cont">
+                                    <div class="map-plate__date">10 – 11 ноября 2026</div>
+                                    <div class="map-plate__loc">Москва, Техноград на ВДНХ </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__coll">
+                    <a href="" class="footer__logo">
+                        <img src="./img/logo-black.svg" alt="">
+                    </a>
+                    <div class="coll-block__val">intercomm_media © 2026</div>
+                    <div class="coll-block__name">Сделано в MediaLine <br> и Креативном агентстве ИнтерКомм</div>
+                </div>
+                <div class="footer__coll">
+                    <div class="coll-block">
+                        <div class="coll-block__name">Название</div>
+                        <div class="coll-block__val">ИнтерКомм</div>
+                    </div>
+
+                    <div class="coll-block">
+                        <div class="coll-block__name">Главный редактор</div>
+                        <div class="coll-block__val">Рудакова Л.А.</div>
+                    </div>
+
+                    <div class="coll-block">
+                        <div class="coll-block__name">Учредитель</div>
+                        <div class="coll-block__val">ООО «АПДЕЙТ МЕДИА»</div>
+                    </div>
+                </div>
+                <div class="footer__coll">
+                    <div class="coll-block">
+                        <div class="coll-block__name">Телефон редакции</div>
+                        <a href="" class="coll-block__val">+7 (495) 640-08-38/39 </a>
+                    </div>
+
+                    <div class="coll-block">
+                        <div class="coll-block__name">Электронная почта редакции</div>
+                        <a href="mailto:news@intercomm.media" class="coll-block__val">news@intercomm.media</a>
+                    </div>
+
+                    <div class="coll-block">
+                        <div class="coll-block__name">Документы</div>
+                        <a href="" target="_blank" class="coll-block__val">Политика конфидециальности</a>
+                    </div>
+                </div>
+                <div class="footer__coll">
+                    <div class="coll-block">
+                        <div class="coll-block__name">Регистрация СМИ</div>
+                        <div class="coll-block__val">
+                            ЭЛ № ФС-77-76145 <br>
+                            ОТ 03 ИЮЛЯ 2019 ГОДА.
+                        </div>
+                    </div>
+                    <div class="coll-block">
+                        <div class="coll-block__name">Форма распространения</div>
+                        <div class="coll-block__val">
+                            Сетевое издание
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
