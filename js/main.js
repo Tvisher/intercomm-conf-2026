@@ -36,3 +36,40 @@ const partnersSlider = new Swiper('.partners-slider', {
         dynamicBullets: true,
     },
 });
+
+
+const player = new Plyr('#player', {
+    controls: ['play-large']
+});
+
+
+// 1. Находим все блоки с выбором количества
+const countBlocks = document.querySelectorAll('.form-template__items-count');
+
+// 2. Перебираем каждый блок отдельно
+countBlocks.forEach(block => {
+    const minusBtn = block.querySelector('.calc__minus');
+    const plusBtn = block.querySelector('.calc__plus');
+    const plate = block.querySelector('.calc__plate');
+
+    // Функция обновления (контекст ограничен текущим блоком 'block')
+    const updateCount = (delta) => {
+        let count = parseInt(plate.dataset.count) || 1;
+        count += delta;
+
+        if (count < 1) count = 1;
+
+        plate.textContent = count;
+        plate.dataset.count = count;
+
+        // Визуальная блокировка минуса внутри текущего блока
+        minusBtn.style.opacity = (count === 1) ? '0.3' : '1';
+    };
+
+    // Слушатели событий для кнопок конкретного блока
+    minusBtn.addEventListener('click', () => updateCount(-1));
+    plusBtn.addEventListener('click', () => updateCount(1));
+
+    // Инициализация состояния (чтобы сразу применить стили для 1 шт)
+    updateCount(0);
+});

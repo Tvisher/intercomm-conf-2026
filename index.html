@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/swiper-bundle.css" />
+    <link rel="stylesheet" href="./css/plyr.css" />
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
@@ -255,6 +256,14 @@
                                 <div class="calc__plus">+</div>
                             </div>
                         </div>
+                        <label class="form-template__agree">
+                            <input type="checkbox" name="agree">
+                            <div class="agree-w">
+                                <p> Я соглашаюсь с <a href="#" target="_blank">обработкой персональных данных</a></p>
+                            </div>
+                        </label>
+
+                        <button class="btn form-submit" type="submit">Хочу стать участником</button>
                     </form>
                 </div>
             </div>
@@ -264,7 +273,9 @@
                 <h2 class="section-title">КАК ЭТО БЫЛО В 2025</h2>
                 <div class="how-it-was__video-wrapper">
                     <div class="how-it-was__video">
-                        <video src=""></video>
+                        <video id="player" playsinline data-poster="/path/to/poster.jpg">
+                            <source src="/path/to/video.mp4" type="video/mp4" />
+                        </video>
                     </div>
                 </div>
             </div>
@@ -720,7 +731,49 @@
                             </div>
                         </div>
                     </div>
-                    <div class="contacts__right"></div>
+                    <div class="contacts__right">
+                        <form class="form-template">
+                            <div class="form-template__header">
+                                <div class="form-template__title">Лучшая цена</div>
+                                <div class="form-template__decr">до 1 июля</div>
+                            </div>
+
+                            <div class="form-template__body">
+                                <label class="form-template__field">
+                                    <input type="text" name="name" placeholder="ФИО">
+                                </label>
+
+                                <label class="form-template__field">
+                                    <input type="text" name="company" placeholder="Название компании">
+                                </label>
+
+                                <label class="form-template__field">
+                                    <input type="text" name="email" placeholder="Электронная почта">
+                                </label>
+
+                                <label class="form-template__field">
+                                    <input type="text" name="phone" placeholder="Номер телефона">
+                                </label>
+                            </div>
+                            <div class="form-template__items-count">
+                                <div class="items-count__name">Количество билетов</div>
+                                <div class="items-count__calc">
+                                    <div class="calc__minus">-</div>
+                                    <div class="calc__plate" data-count="1">1</div>
+                                    <div class="calc__plus">+</div>
+                                </div>
+                            </div>
+                            <label class="form-template__agree">
+                                <input type="checkbox" name="agree">
+                                <div class="agree-w">
+                                    <p> Я соглашаюсь с <a href="#" target="_blank">обработкой персональных данных</a>
+                                    </p>
+                                </div>
+                            </label>
+
+                            <button class="btn form-submit" type="submit">Хочу стать участником</button>
+                        </form>
+                    </div>
                 </div>
                 <div class="contacts__map-wrapper">
                     <h2 class="section-title">АДРЕС</h2>
@@ -807,8 +860,227 @@
             </div>
         </div>
     </footer>
+    <div class="day-modal" data-day-modal="1">
+        <div class="day-modal__content">
+            <div class="day-modal__close">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="50" height="50" rx="25" fill="#24222E" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M34.4562 14.4167C35.0564 13.8458 36.006 13.8697 36.5773 14.4695C37.1486 15.0693 37.1257 16.0185 36.5256 16.5896L16.5353 35.6101C15.9353 36.181 14.9856 36.1578 14.4142 35.5583C13.8432 34.9585 13.8669 34.0092 14.467 33.4382L34.4562 14.4167Z"
+                        fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M16.5432 15.39C15.943 14.8192 14.9934 14.8431 14.4221 15.4428C13.8507 16.0426 13.8737 16.9918 14.4739 17.5629L34.4651 36.5824C35.065 37.1532 36.0137 37.1307 36.5852 36.5316C37.1565 35.9318 37.1335 34.9826 36.5334 34.4115L16.5432 15.39Z"
+                        fill="white" />
+                </svg>
+
+            </div>
+            <div class="day-modal__name">Треки</div>
+            <div class="day-modal__body">
+                <div class="day-modal__block">
+                    <div class="block__persons">
+                        <div class="block__person">
+                            <div class="person__image"></div>
+                            <div class="person__name">Имя Фамлия</div>
+                            <div class="person__position">Генеральный директор <br> ИнтерКомм</div>
+                        </div>
+                        <div class="block__person">
+                            <div class="person__image"></div>
+                            <div class="person__name">Имя Фамлия</div>
+                            <div class="person__position">Генеральный директор <br> ИнтерКомм</div>
+                        </div>
+                    </div>
+                    <div class="block__info">
+                        <div class="info__title">Традиционный</div>
+                        <div class="info__descr">
+                            Известные бренды, громкие имена
+                            и&nbsp;главные темы, которые волнуют сообщество в&nbsp;2026, все&nbsp;то, что помогает нам
+                            понимать рынок труда и&nbsp;внутрикома
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-modal__block _rev">
+                    <div class="block__info">
+                        <div class="info__title">Кейсовник</div>
+                        <div class="info__descr">
+                            Парад лучших кейсов индустрии
+                            с&nbsp;разбором каналов, инструментов
+                            и&nbsp;механик реализации
+                        </div>
+                    </div>
+                    <div class="block__persons">
+                        <div class="block__person">
+                            <div class="person__image"></div>
+                            <div class="person__name">Имя Фамлия</div>
+                            <div class="person__position">Генеральный директор <br> ИнтерКомм</div>
+                        </div>
+                        <div class="block__person">
+                            <div class="person__image"></div>
+                            <div class="person__name">Имя Фамлия</div>
+                            <div class="person__position">Генеральный директор <br> ИнтерКомм</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-modal__block">
+                    <div class="block__persons">
+                        <div class="block__person">
+                            <div class="person__image"></div>
+                            <div class="person__name">Имя Фамлия</div>
+                            <div class="person__position">Генеральный директор <br> ИнтерКомм</div>
+                        </div>
+                        <div class="block__person">
+                            <div class="person__image"></div>
+                            <div class="person__name">Имя Фамлия</div>
+                            <div class="person__position">Генеральный директор <br> ИнтерКомм</div>
+                        </div>
+                    </div>
+                    <div class="block__info">
+                        <div class="info__title">Навыки</div>
+                        <div class="info__descr">
+                            Расширение T-shaped компетенций, интеграция смежных профессиональных практик, обучение через
+                            кейс-стади
+                            и&nbsp;интерактивные форматы
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-modal__block _rev">
+                    <div class="block__info">
+                        <div class="info__title">Экспериментальный</div>
+                        <div class="info__descr">
+                            Новые форматы взаимодействия,
+                            где участники становятся авторами коммуникаций. Скажи докладам твердое &laquo;нет&raquo;!
+                        </div>
+                    </div>
+                    <div class="block__persons">
+                        <div class="block__person">
+                            <div class="person__image"></div>
+                            <div class="person__name">Имя Фамлия</div>
+                            <div class="person__position">Генеральный директор <br> ИнтерКомм</div>
+                        </div>
+                        <div class="block__person">
+                            <div class="person__image"></div>
+                            <div class="person__name">Имя Фамлия</div>
+                            <div class="person__position">Генеральный директор <br> ИнтерКомм</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="day-modal" data-day-modal="2">
+        <div class="day-modal__content">
+            <div class="day-modal__close">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="50" height="50" rx="25" fill="#24222E" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M34.4562 14.4167C35.0564 13.8458 36.006 13.8697 36.5773 14.4695C37.1486 15.0693 37.1257 16.0185 36.5256 16.5896L16.5353 35.6101C15.9353 36.181 14.9856 36.1578 14.4142 35.5583C13.8432 34.9585 13.8669 34.0092 14.467 33.4382L34.4562 14.4167Z"
+                        fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M16.5432 15.39C15.943 14.8192 14.9934 14.8431 14.4221 15.4428C13.8507 16.0426 13.8737 16.9918 14.4739 17.5629L34.4651 36.5824C35.065 37.1532 36.0137 37.1307 36.5852 36.5316C37.1565 35.9318 37.1335 34.9826 36.5334 34.4115L16.5432 15.39Z"
+                        fill="white" />
+                </svg>
+
+            </div>
+            <div class="day-modal__name">Треки</div>
+            <div class="day-modal__body">
+                <div class="day-modal__block">
+                    <div class="block__persons">
+                        <div class="block__person">
+                            <div class="person__image"></div>
+                            <div class="person__name">Имя Фамлия</div>
+                            <div class="person__position">Генеральный директор <br> ИнтерКомм</div>
+                        </div>
+                        <div class="block__person">
+                            <div class="person__image"></div>
+                            <div class="person__name">Имя Фамлия</div>
+                            <div class="person__position">Генеральный директор <br> ИнтерКомм</div>
+                        </div>
+                    </div>
+                    <div class="block__info">
+                        <div class="info__title">Традиционный</div>
+                        <div class="info__descr">
+                            Известные бренды, громкие имена
+                            и&nbsp;главные темы, которые волнуют сообщество в&nbsp;2026, все&nbsp;то, что помогает нам
+                            понимать рынок труда и&nbsp;внутрикома
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-modal__block _rev">
+                    <div class="block__info">
+                        <div class="info__title">Кейсовник</div>
+                        <div class="info__descr">
+                            Парад лучших кейсов индустрии
+                            с&nbsp;разбором каналов, инструментов
+                            и&nbsp;механик реализации
+                        </div>
+                    </div>
+                    <div class="block__persons">
+                        <div class="block__person">
+                            <div class="person__image"></div>
+                            <div class="person__name">Имя Фамлия</div>
+                            <div class="person__position">Генеральный директор <br> ИнтерКомм</div>
+                        </div>
+                        <div class="block__person">
+                            <div class="person__image"></div>
+                            <div class="person__name">Имя Фамлия</div>
+                            <div class="person__position">Генеральный директор <br> ИнтерКомм</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-modal__block">
+                    <div class="block__persons">
+                        <div class="block__person">
+                            <div class="person__image"></div>
+                            <div class="person__name">Имя Фамлия</div>
+                            <div class="person__position">Генеральный директор <br> ИнтерКомм</div>
+                        </div>
+                        <div class="block__person">
+                            <div class="person__image"></div>
+                            <div class="person__name">Имя Фамлия</div>
+                            <div class="person__position">Генеральный директор <br> ИнтерКомм</div>
+                        </div>
+                    </div>
+                    <div class="block__info">
+                        <div class="info__title">Навыки</div>
+                        <div class="info__descr">
+                            Расширение T-shaped компетенций, интеграция смежных профессиональных практик, обучение через
+                            кейс-стади
+                            и&nbsp;интерактивные форматы
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-modal__block _rev">
+                    <div class="block__info">
+                        <div class="info__title">Экспериментальный</div>
+                        <div class="info__descr">
+                            Новые форматы взаимодействия,
+                            где участники становятся авторами коммуникаций. Скажи докладам твердое &laquo;нет&raquo;!
+                        </div>
+                    </div>
+                    <div class="block__persons">
+                        <div class="block__person">
+                            <div class="person__image"></div>
+                            <div class="person__name">Имя Фамлия</div>
+                            <div class="person__position">Генеральный директор <br> ИнтерКомм</div>
+                        </div>
+                        <div class="block__person">
+                            <div class="person__image"></div>
+                            <div class="person__name">Имя Фамлия</div>
+                            <div class="person__position">Генеральный директор <br> ИнтерКомм</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/plyr.js"></script>
     <script src="./js/main.js"></script>
 
 </body>
