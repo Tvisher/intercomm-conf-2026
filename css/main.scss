@@ -158,6 +158,28 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: 120%;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: color 0.2s ease-in-out;
+  &::before {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: linear-gradient(90deg, #fa36db 0%, #8f68ed 100%);
+  }
+  &:hover {
+    color: #fff;
+    &::before {
+      opacity: 1;
+    }
+  }
 }
 
 .main {
@@ -1498,5 +1520,11 @@ a.coll-block__val {
   .form-template__close {
     right: 20px;
     top: 20px;
+  }
+}
+
+a.block-inner__val {
+  &:hover {
+    text-decoration: underline;
   }
 }
