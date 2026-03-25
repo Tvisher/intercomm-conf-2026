@@ -394,9 +394,8 @@ body {
 }
 
 .how-it-was__video-wrapper {
-  background-color: #fff;
+  background-color: #24222e;
   border-radius: 50px;
-  background: #fff;
   height: 0;
   width: 100%;
   padding-top: 47.6667%;
@@ -423,6 +422,7 @@ body {
 }
 
 .speakers {
+  padding-top: 90px;
   max-width: 100vw;
   overflow: hidden;
 
@@ -452,6 +452,7 @@ body {
 }
 
 .speaker-slide {
+  height: auto;
   padding: 19px;
   border-radius: 90px;
   width: 336px;
@@ -706,6 +707,7 @@ body {
 }
 
 .ticket-btn {
+  cursor: pointer;
   border-radius: 38px;
   background: linear-gradient(90deg, #fa36db 0%, #8f68ed 100%);
   height: 98px;
@@ -972,6 +974,11 @@ body {
   border-radius: 50px;
   overflow: hidden;
   padding-top: 47.7%;
+  &:hover .map-plate {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0);
+  }
 }
 
 .contacts__map-inner {
@@ -984,6 +991,7 @@ body {
 }
 
 .map-plate {
+  transition: all 0.5s ease-in-out;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -995,6 +1003,7 @@ body {
   align-items: center;
   color: #24222e;
   gap: 20px;
+  box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .map-plate__ico {
@@ -1133,6 +1142,9 @@ a.coll-block__val {
     line-height: 130%;
     padding: 11px;
     padding-left: 40px;
+    &.error {
+      color: red !important;
+    }
   }
 }
 
@@ -1188,6 +1200,9 @@ a.coll-block__val {
   a {
     text-decoration: underline;
   }
+  &.error * {
+    color: red !important;
+  }
   input {
     position: absolute;
     left: 0;
@@ -1205,6 +1220,7 @@ a.coll-block__val {
     gap: 21px;
     position: relative;
     &::before {
+      flex-shrink: 0;
       content: "";
       display: block;
       width: 34px;
@@ -1245,7 +1261,8 @@ a.coll-block__val {
   background-color: #fff;
 }
 
-.day-modal {
+.day-modal,
+.form-modal {
   overscroll-behavior: contain;
   overflow: auto;
   z-index: 99;
@@ -1259,6 +1276,9 @@ a.coll-block__val {
   padding: 40px;
   opacity: 0;
   visibility: hidden;
+  transition:
+    visibility 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
   &.show {
     opacity: 1;
     visibility: visible;
@@ -1368,5 +1388,93 @@ a.coll-block__val {
   svg {
     width: 100%;
     height: 100%;
+  }
+}
+
+.form-modal__inner {
+  position: relative;
+  background-color: #24222e;
+  max-width: 461px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 68px;
+  &.white-form {
+    background-color: #fff;
+
+    .form-template__header {
+      background-color: #24222e;
+      color: #fff;
+      .form-template__title {
+        color: #fff;
+      }
+    }
+    .form-template__name {
+      color: #24222e;
+    }
+    .form-template__field input {
+      background-color: #24222e;
+      color: #fff;
+    }
+    .form-template__agree .agree-w::before {
+      background-color: #24222e;
+    }
+    .form-template__agree .agree-w {
+      color: #24222e;
+    }
+    .form-template__agree input:checked + .agree-w::before {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='28' height='17' viewBox='0 0 28 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.0954 16.9688C10.6888 16.9982 10.2715 16.8637 9.95287 16.5606L0.465565 7.53029C-0.134455 6.95912 -0.157444 6.00914 0.413807 5.40919C0.985106 4.80957 1.93495 4.78639 2.5349 5.35744L11.0076 13.4229L24.8005 0.409193C25.403 -0.159075 26.352 -0.132332 26.9206 0.46974C27.4893 1.07219 27.4617 2.02231 26.8591 2.59083L12.0515 16.5625C11.8019 16.7978 11.4924 16.9295 11.1755 16.9619C11.1697 16.9627 11.1638 16.9632 11.1579 16.9639C11.1371 16.9658 11.1163 16.9677 11.0954 16.9688Z' fill='white'/%3e%3c/svg%3e ");
+    }
+    .form-template__items-count {
+      color: #24222e;
+    }
+    .calc__plate {
+      background-color: #24222e;
+      color: #fff;
+    }
+  }
+}
+.form-template__name {
+  padding-top: 24px;
+  color: #fff;
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.form-template__close {
+  cursor: pointer;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 28px;
+  top: 28px;
+}
+
+.items-count-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  .form-template__items-count {
+    padding: 0px 12px;
+  }
+}
+
+.thanks-modal {
+  color: #24222e;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%;
+
+  .form-modal__inner {
+    max-width: 585px;
+    padding: 60px;
+    border-radius: 40px;
+  }
+  .form-template__close {
+    right: 20px;
+    top: 20px;
   }
 }

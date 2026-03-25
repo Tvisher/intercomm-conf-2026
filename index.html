@@ -18,10 +18,10 @@
                     <img src="./img/logo-black.svg" alt="">
                 </a>
                 <div class="header__nav">
-                    <a href="#" class="header__link">Спикеры</a>
-                    <a href="#" class="header__link">Программа</a>
-                    <a href="#" class="header__link">Вопросы</a>
-                    <a href="#" class="header__link">Контакты</a>
+                    <a href="#speakers" class="header__link">Спикеры</a>
+                    <a href="#programs" class="header__link">Программа</a>
+                    <a href="#faq" class="header__link">Вопросы</a>
+                    <a href="#contacts" class="header__link">Контакты</a>
                 </div>
                 <a href="#" class="btn">Билеты</a>
             </div>
@@ -43,9 +43,9 @@
                         </p>
                         <div class="main-info">10 – 11 ноября 2026 &nbsp;&nbsp;Москва, Техноград на ВДНХ</div>
                         <div class="main-btns">
-                            <a href="#" class="main-btn">Аккредитация СМИ / блогеров</a>
-                            <a href="#" class="main-btn">Стать спикером</a>
-                            <a href="#" class="main-btn">Стать партнёром</a>
+                            <a href="#" class="main-btn" data-modal-btn="accreditation">Аккредитация СМИ / блогеров</a>
+                            <a href="#" class="main-btn" data-modal-btn="speaker">Стать спикером</a>
+                            <a href="#" class="main-btn" data-modal-btn="partner">Стать партнёром</a>
                         </div>
                     </section>
                     <section class="about-section">
@@ -225,7 +225,7 @@
 
                 </div>
                 <div class="right-content">
-                    <form class="form-template">
+                    <form class="form-template" name="single-ticket">
                         <div class="form-template__header">
                             <div class="form-template__title">Лучшая цена</div>
                             <div class="form-template__decr">до 1 июля</div>
@@ -273,14 +273,14 @@
                 <h2 class="section-title">КАК ЭТО БЫЛО В 2025</h2>
                 <div class="how-it-was__video-wrapper">
                     <div class="how-it-was__video">
-                        <video id="player" playsinline data-poster="/path/to/poster.jpg">
-                            <source src="/path/to/video.mp4" type="video/mp4" />
+                        <video id="player" playsinline>
+                            <source src="./files/how-it-was.mp4" type="video/mp4" />
                         </video>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="speakers">
+        <section class="speakers" id="speakers">
             <div class="container">
                 <h2 class="section-title">СПИКЕРЫ</h2>
                 <div class="speakers-slider swiper">
@@ -323,7 +323,7 @@
                 </div>
             </div>
         </section>
-        <section class="programs">
+        <section class="programs" id="programs">
             <div class="container">
                 <h2 class="section-title">
                     ПРОГРАММНЫЙ <br>КОМИТЕТ
@@ -340,7 +340,8 @@
                     <div class="programs-day">
                         <div class="day__head">
                             <span>ДЕНЬ 1</span>
-                            <div class="day__open" style="background-color: #73E4E5;">Открыть</div>
+                            <div data-modal-btn="day-modal-1" class="day__open" style="background-color: #73E4E5;">
+                                Открыть</div>
                         </div>
                         <div class="day__body">
                             Внутренние коммуникации
@@ -349,14 +350,16 @@
                     <div class="programs-day">
                         <div class="day__head">
                             <span>ДЕНЬ 2</span>
-                            <div class="day__open" style="background-color: #FBBF77;">Открыть</div>
+                            <div data-modal-btn="day-modal-2" class="day__open" style="background-color: #FBBF77;">
+                                Открыть</div>
                         </div>
                         <div class="day__body">Корпоративная культура, бренд работодателя</div>
                     </div>
                 </div>
 
                 <div class="programs__descr">
-                    Узнайте об обновлениях в программе первыми <a href="" class="btn">Подписаться</a>
+                    Узнайте об обновлениях в программе первыми <a href="#" class="btn"
+                        data-modal-btn="subscribe">Подписаться</a>
                 </div>
             </div>
         </section>
@@ -368,17 +371,17 @@
                         <div class="timer__plate">
                             До повышения цен осталось:
                         </div>
-                        <div class="timer__nums">
+                        <div class="timer__nums" data-timer-date="01.06.2026">
                             <div class="timer__num">
-                                <span class="num">22</span>
+                                <span class="num">00</span>
                                 <span class="text">дней</span>
                             </div>
                             <div class="timer__num">
-                                <span class="num">13</span>
+                                <span class="num">00</span>
                                 <span class="text">часов</span>
                             </div>
                             <div class="timer__num">
-                                <span class="num">55</span>
+                                <span class="num">00</span>
                                 <span class="text">минут</span>
                             </div>
                         </div>
@@ -403,16 +406,16 @@
                         </div>
                         <div class="ticket__footer">
                             <div class="ticket-btns">
-                                <div class="ticket-btn">
+                                <a href="#" class="ticket-btn">
                                     <div class="ticket-btn__days">1 день</div>
                                     <div class="ticket-btn__text">купить за</div>
                                     <div class="ticket-btn__price">23 990</div>
-                                </div>
-                                <div class="ticket-btn">
+                                </a>
+                                <a href="#" class="ticket-btn">
                                     <div class="ticket-btn__days">2 дня</div>
                                     <div class="ticket-btn__text">купить за</div>
                                     <div class="ticket-btn__price">43 990</div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -432,7 +435,7 @@
                             </div>
                         </div>
                         <div class="ticket__footer">
-                            <div class="ticket-btn _single">
+                            <div class="ticket-btn _single" data-modal-btn="tickets">
                                 <div class="ticket-btn__days">2 дня</div>
                                 <div class="col-w">
                                     <div class="ticket-btn__price" style="text-decoration: line-through;">98 000</div>
@@ -464,7 +467,7 @@
                             </div>
                         </div>
                         <div class="ticket__footer">
-                            <div class="ticket-btn _single">
+                            <div class="ticket-btn _single" data-modal-btn="tickets">
                                 <div class="ticket-btn__days">2 дня</div>
                                 <div class="col-w">
                                     <div class="ticket-btn__price" style="text-decoration: line-through;">194 000</div>
@@ -503,7 +506,7 @@
                             а мы подберем для вас лучшую локацию
                             на площадке!
                         </div>
-                        <a href="" class="btn">Поставить стенд</a>
+                        <a href="#" class="btn" data-modal-btn="stand">Поставить стенд</a>
                     </div>
                 </div>
             </div>
@@ -557,7 +560,7 @@
                 <a href="" class="btn">Стать партнёром</a>
             </div>
         </section>
-        <section class="faq">
+        <section class="faq" id="faq">
             <div class="container">
                 <h2 class="section-title">ЧАСТО ЗАДАВАЕМЫЕ <br>
                     ВОПРОСЫ</h2>
@@ -677,7 +680,7 @@
                 </div>
             </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
             <div class="container">
                 <div class="contacts__wrapper">
                     <div class="contacts__left">
@@ -732,7 +735,7 @@
                         </div>
                     </div>
                     <div class="contacts__right">
-                        <form class="form-template">
+                        <form class="form-template" name="single-ticket">
                             <div class="form-template__header">
                                 <div class="form-template__title">Лучшая цена</div>
                                 <div class="form-template__decr">до 1 июля</div>
@@ -779,6 +782,9 @@
                     <h2 class="section-title">АДРЕС</h2>
                     <div class="contacts__map">
                         <div class="contacts__map-inner">
+                            <iframe
+                                src="https://yandex.ru/map-widget/v1/?um=constructor%3A71a15c09535d85420aad903c961211e4af170febc30bdfcc6b3a13468572158e&amp;source=constructor"
+                                width="100%" height="572" frameborder="0"></iframe>
                             <div class="map-plate">
                                 <div class="map-plate__ico">
                                     <svg width="33" height="45" viewBox="0 0 33 45" fill="none"
@@ -860,7 +866,7 @@
             </div>
         </div>
     </footer>
-    <div class="day-modal" data-day-modal="1">
+    <div class="day-modal" data-modal-type="day-modal-1">
         <div class="day-modal__content">
             <div class="day-modal__close">
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -969,7 +975,8 @@
             </div>
         </div>
     </div>
-    <div class="day-modal" data-day-modal="2">
+
+    <div class="day-modal" data-modal-type="day-modal-2">
         <div class="day-modal__content">
             <div class="day-modal__close">
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1078,6 +1085,292 @@
             </div>
         </div>
     </div>
+
+    <div class="form-modal" data-modal-type="partner">
+        <div class="form-modal__inner ">
+            <form class="form-template" name="partner">
+                <div class="form-template__name">Стать партнёром</div>
+                <div class="form-template__close">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="30" height="30" rx="15" fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20.3008 7.69502C20.901 7.12424 21.8496 7.14804 22.4209 7.74776C22.9921 8.34746 22.9699 9.29581 22.3702 9.8669L9.32817 22.2761C8.728 22.8471 7.77746 22.8232 7.2061 22.2233C6.63529 21.6235 6.6589 20.6741 7.25883 20.1032L20.3008 7.69502Z"
+                            fill="#24222E" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.69893 7.72442C9.09874 7.15367 8.14915 7.17746 7.57784 7.77716C7.00672 8.37688 7.0298 9.32529 7.62959 9.8963L20.6716 22.3045C21.2718 22.8755 22.2223 22.8526 22.7937 22.2527C23.3647 21.6529 23.341 20.7035 22.7409 20.1326L9.69893 7.72442Z"
+                            fill="#24222E" />
+                    </svg>
+                </div>
+                <div class="form-template__body">
+                    <label class="form-template__field">
+                        <input type="text" name="name" placeholder="ФИО">
+                    </label>
+
+                    <label class="form-template__field">
+                        <input type="text" name="company" placeholder="Название компании">
+                    </label>
+
+                    <label class="form-template__field">
+                        <input type="text" name="email-or-phone" placeholder="Электронная почта или номер телефона">
+                    </label>
+
+                </div>
+                <label class="form-template__agree">
+                    <input type="checkbox" name="agree">
+                    <div class="agree-w">
+                        <p> Я соглашаюсь с <a href="#" target="_blank">обработкой персональных данных</a></p>
+                    </div>
+                </label>
+
+                <button class="btn form-submit" type="submit">Подать заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="form-modal" data-modal-type="speaker">
+        <div class="form-modal__inner ">
+            <form class="form-template" name="speaker">
+                <div class="form-template__name">Стать спикером</div>
+                <div class="form-template__close">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="30" height="30" rx="15" fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20.3008 7.69502C20.901 7.12424 21.8496 7.14804 22.4209 7.74776C22.9921 8.34746 22.9699 9.29581 22.3702 9.8669L9.32817 22.2761C8.728 22.8471 7.77746 22.8232 7.2061 22.2233C6.63529 21.6235 6.6589 20.6741 7.25883 20.1032L20.3008 7.69502Z"
+                            fill="#24222E" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.69893 7.72442C9.09874 7.15367 8.14915 7.17746 7.57784 7.77716C7.00672 8.37688 7.0298 9.32529 7.62959 9.8963L20.6716 22.3045C21.2718 22.8755 22.2223 22.8526 22.7937 22.2527C23.3647 21.6529 23.341 20.7035 22.7409 20.1326L9.69893 7.72442Z"
+                            fill="#24222E" />
+                    </svg>
+                </div>
+                <div class="form-template__body">
+                    <label class="form-template__field">
+                        <input type="text" name="name" placeholder="ФИО">
+                    </label>
+
+                    <label class="form-template__field">
+                        <input type="text" name="company" placeholder="Название компании">
+                    </label>
+
+                    <label class="form-template__field">
+                        <input type="text" name="email-or-phone" placeholder="Электронная почта или номер телефона">
+                    </label>
+
+                    <label class="form-template__field">
+                        <input type="text" name="theme" placeholder="Предпочтительная тема">
+                    </label>
+
+                </div>
+                <label class="form-template__agree">
+                    <input type="checkbox" name="agree">
+                    <div class="agree-w">
+                        <p> Я соглашаюсь с <a href="#" target="_blank">обработкой персональных данных</a></p>
+                    </div>
+                </label>
+
+                <button class="btn form-submit" type="submit">Подать заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="form-modal" data-modal-type="accreditation">
+        <div class="form-modal__inner ">
+            <form class="form-template" name="accreditation">
+                <div class="form-template__name">Аккредитация <br> СМИ / блогеров</div>
+                <div class="form-template__close">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="30" height="30" rx="15" fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20.3008 7.69502C20.901 7.12424 21.8496 7.14804 22.4209 7.74776C22.9921 8.34746 22.9699 9.29581 22.3702 9.8669L9.32817 22.2761C8.728 22.8471 7.77746 22.8232 7.2061 22.2233C6.63529 21.6235 6.6589 20.6741 7.25883 20.1032L20.3008 7.69502Z"
+                            fill="#24222E" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.69893 7.72442C9.09874 7.15367 8.14915 7.17746 7.57784 7.77716C7.00672 8.37688 7.0298 9.32529 7.62959 9.8963L20.6716 22.3045C21.2718 22.8755 22.2223 22.8526 22.7937 22.2527C23.3647 21.6529 23.341 20.7035 22.7409 20.1326L9.69893 7.72442Z"
+                            fill="#24222E" />
+                    </svg>
+                </div>
+                <div class="form-template__body">
+                    <label class="form-template__field">
+                        <input type="text" name="name" placeholder="ФИО">
+                    </label>
+
+                    <label class="form-template__field">
+                        <input type="text" name="company" placeholder="Наименование СМИ ">
+                    </label>
+
+                    <label class="form-template__field">
+                        <input type="text" name="link" placeholder="Ссылка на профиль блогера">
+                    </label>
+
+                    <label class="form-template__field">
+                        <input type="text" name="phone" placeholder="Номер телефона">
+                    </label>
+
+                </div>
+                <label class="form-template__agree">
+                    <input type="checkbox" name="agree">
+                    <div class="agree-w">
+                        <p> Я соглашаюсь с <a href="#" target="_blank">обработкой персональных данных</a></p>
+                    </div>
+                </label>
+
+                <button class="btn form-submit" type="submit">Подать заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="form-modal" data-modal-type="stand">
+        <div class="form-modal__inner ">
+            <form class="form-template" name="stand">
+                <div class="form-template__name">Поставить стенд</div>
+                <div class="form-template__close">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="30" height="30" rx="15" fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20.3008 7.69502C20.901 7.12424 21.8496 7.14804 22.4209 7.74776C22.9921 8.34746 22.9699 9.29581 22.3702 9.8669L9.32817 22.2761C8.728 22.8471 7.77746 22.8232 7.2061 22.2233C6.63529 21.6235 6.6589 20.6741 7.25883 20.1032L20.3008 7.69502Z"
+                            fill="#24222E" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.69893 7.72442C9.09874 7.15367 8.14915 7.17746 7.57784 7.77716C7.00672 8.37688 7.0298 9.32529 7.62959 9.8963L20.6716 22.3045C21.2718 22.8755 22.2223 22.8526 22.7937 22.2527C23.3647 21.6529 23.341 20.7035 22.7409 20.1326L9.69893 7.72442Z"
+                            fill="#24222E" />
+                    </svg>
+                </div>
+                <div class="form-template__body">
+                    <label class="form-template__field">
+                        <input type="text" name="name" placeholder="ФИО">
+                    </label>
+
+                    <label class="form-template__field">
+                        <input type="text" name="company" placeholder="Название компании">
+                    </label>
+
+                    <label class="form-template__field">
+                        <input type="text" name="email-or-phone" placeholder="Электронная почта или номер телефона">
+                    </label>
+                </div>
+                <label class="form-template__agree">
+                    <input type="checkbox" name="agree">
+                    <div class="agree-w">
+                        <p> Я соглашаюсь с <a href="#" target="_blank">обработкой персональных данных</a></p>
+                    </div>
+                </label>
+
+                <button class="btn form-submit" type="submit">Подать заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="form-modal" data-modal-type="subscribe">
+        <div class="form-modal__inner white-form">
+            <form class="form-template" name="subscribe">
+                <div class="form-template__name">Узнайте об обновлениях <br> программы раньше других</div>
+                <div class="form-template__close">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="30" height="30" rx="15" fill="#24222E" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20.3008 7.69502C20.901 7.12424 21.8496 7.14804 22.4209 7.74776C22.9921 8.34746 22.9699 9.29581 22.3702 9.8669L9.32817 22.2761C8.728 22.8471 7.77746 22.8232 7.2061 22.2233C6.63529 21.6235 6.6589 20.6741 7.25883 20.1032L20.3008 7.69502Z"
+                            fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.69881 7.72436C9.09862 7.15361 8.14903 7.1774 7.57771 7.7771C7.0066 8.37681 7.02968 9.32523 7.62947 9.89624L20.6715 22.3044C21.2717 22.8755 22.2221 22.8525 22.7935 22.2527C23.3646 21.6529 23.3408 20.7035 22.7408 20.1326L9.69881 7.72436Z"
+                            fill="white" />
+                    </svg>
+                </div>
+                <div class="form-template__body">
+                    <label class="form-template__field">
+                        <input type="text" name="name" placeholder="ФИО">
+                    </label>
+                    <label class="form-template__field">
+                        <input type="text" name="email" placeholder="Электронная почта">
+                    </label>
+
+                </div>
+                <label class="form-template__agree">
+                    <input type="checkbox" name="agree">
+                    <div class="agree-w">
+                        <p> Я соглашаюсь с <a href="#" target="_blank">обработкой персональных данных</a>,<br> а так же
+                            на
+                            получение информационных
+                            и рекламных сообщений</p>
+                    </div>
+                </label>
+
+                <button class="btn form-submit" type="submit">Подписаться на обновления</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="form-modal" data-modal-type="tickets">
+        <div class="form-modal__inner white-form">
+            <form class="form-template" name="tickets">
+                <div class="form-template__header">
+                    <div class="form-template__title">Лучшая цена</div>
+                    <div class="form-template__decr">до 1 июля</div>
+                </div>
+
+                <div class="form-template__body">
+                    <label class="form-template__field">
+                        <input type="text" name="name" placeholder="ФИО">
+                    </label>
+
+                    <label class="form-template__field">
+                        <input type="text" name="company" placeholder="Название компании">
+                    </label>
+
+                    <label class="form-template__field">
+                        <input type="text" name="email" placeholder="Электронная почта">
+                    </label>
+
+                    <label class="form-template__field">
+                        <input type="text" name="phone" placeholder="Номер телефона">
+                    </label>
+                </div>
+                <div class="items-count-wrapper">
+                    <div class="form-template__items-count">
+                        <div class="items-count__name">Количество билетов <b>«Стандарт»</b></div>
+                        <div class="items-count__calc">
+                            <div class="calc__minus">-</div>
+                            <div class="calc__plate" data-count="0" data-ticket-type="standart">0</div>
+                            <div class="calc__plus">+</div>
+                        </div>
+                    </div>
+                    <div class="form-template__items-count">
+                        <div class="items-count__name">Количество билетов <b>«ТОП»</b></div>
+                        <div class="items-count__calc">
+                            <div class="calc__minus">-</div>
+                            <div class="calc__plate" data-count="0" data-ticket-type="top">0</div>
+                            <div class="calc__plus">+</div>
+                        </div>
+                    </div>
+                </div>
+                <label class="form-template__agree">
+                    <input type="checkbox" name="agree">
+                    <div class="agree-w">
+                        <p> Я соглашаюсь с <a href="#" target="_blank">обработкой персональных данных</a></p>
+                    </div>
+                </label>
+
+                <button class="btn form-submit" type="submit">Хочу стать участником</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="form-modal thanks-modal">
+        <div class="form-modal__inner white-form">
+            <div class="form-template__close">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="30" height="30" rx="15" fill="#24222E" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M20.3008 7.69502C20.901 7.12424 21.8496 7.14804 22.4209 7.74776C22.9921 8.34746 22.9699 9.29581 22.3702 9.8669L9.32817 22.2761C8.728 22.8471 7.77746 22.8232 7.2061 22.2233C6.63529 21.6235 6.6589 20.6741 7.25883 20.1032L20.3008 7.69502Z"
+                        fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M9.69881 7.72436C9.09862 7.15361 8.14903 7.1774 7.57771 7.7771C7.0066 8.37681 7.02968 9.32523 7.62947 9.89624L20.6715 22.3044C21.2717 22.8755 22.2221 22.8525 22.7935 22.2527C23.3646 21.6529 23.3408 20.7035 22.7408 20.1326L9.69881 7.72436Z"
+                        fill="white" />
+                </svg>
+            </div>
+            <b>Благодарим за отправленные контакты!</b>
+            <br>
+            <br>
+            В ближайшее время мы свяжемся с вами.
+        </div>
+    </div>
+
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/plyr.js"></script>
