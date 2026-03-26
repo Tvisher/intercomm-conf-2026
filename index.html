@@ -33,10 +33,32 @@
                     <a href="#faq" class="header__link">Вопросы</a>
                     <a href="#contacts" class="header__link">Контакты</a>
                 </div>
-                <a href="#" class="btn">Билеты</a>
+                <a href="#tickets" class="btn header-btn">Билеты</a>
+                <div class="mob-menu-btn"></div>
             </div>
         </div>
     </header>
+    <div class="mobile-menu">
+        <div class="mobile-menu__inner">
+            <div class="mobile-menu__list">
+                <a href="#speakers" class="header__link">Спикеры</a>
+                <a href="#programs" class="header__link">Программа</a>
+                <a href="#faq" class="header__link">Вопросы</a>
+                <a href="#contacts" class="header__link">Контакты</a>
+            </div>
+            <div class="mobile-menu__close">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="35" height="35" rx="17.5" fill="#24222E" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M23.7599 10.8258C24.16 10.4453 24.7933 10.4611 25.174 10.8609C25.5545 11.2609 25.5387 11.8934 25.1388 12.274L12.2394 24.5533C11.8395 24.9338 11.2062 24.9188 10.8254 24.5191C10.4445 24.1192 10.4605 23.4849 10.8605 23.1041L23.7599 10.8258Z"
+                        fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12.2406 11.4465C11.8405 11.0658 11.2063 11.0817 10.8255 11.4817C10.4451 11.8816 10.461 12.5141 10.8607 12.8948L23.7611 25.1741C24.161 25.5544 24.7934 25.5395 25.1741 25.1399C25.555 24.7399 25.539 24.1056 25.139 23.7249L12.2406 11.4465Z"
+                        fill="white" />
+                </svg>
+            </div>
+        </div>
+    </div>
     <main class="main">
         <div class="container">
             <div class="sticky-container">
@@ -51,7 +73,52 @@
                             внутренних коммуникаций, корпоративной<br>
                             культуры, бренда работодателя.
                         </p>
-                        <div class="main-info">10 – 11 ноября 2026 &nbsp;&nbsp;Москва, Техноград на ВДНХ</div>
+                        <div class="main-info"><span>10 – 11 ноября 2026</span> &nbsp;&nbsp;<span>Москва, Техноград на
+                                ВДНХ</span></div>
+                        <div class="right-content show-on-mob">
+                            <form class="form-template " name="single-ticket">
+                                <div class="form-template__header">
+                                    <div class="form-template__title">Лучшая цена</div>
+                                    <div class="form-template__decr">до 1 июля</div>
+                                </div>
+
+                                <div class="form-template__body">
+                                    <label class="form-template__field">
+                                        <input type="text" name="name" placeholder="ФИО">
+                                    </label>
+
+                                    <label class="form-template__field">
+                                        <input type="text" name="company" placeholder="Название компании">
+                                    </label>
+
+                                    <label class="form-template__field">
+                                        <input type="text" name="email" placeholder="Электронная почта">
+                                    </label>
+
+                                    <label class="form-template__field">
+                                        <input type="text" name="phone" placeholder="Номер телефона">
+                                    </label>
+                                </div>
+                                <div class="form-template__items-count">
+                                    <div class="items-count__name">Количество билетов</div>
+                                    <div class="items-count__calc">
+                                        <div class="calc__minus">-</div>
+                                        <div class="calc__plate" data-count="1">1</div>
+                                        <div class="calc__plus">+</div>
+                                    </div>
+                                </div>
+                                <label class="form-template__agree">
+                                    <input type="checkbox" name="agree">
+                                    <div class="agree-w">
+                                        <p> Я соглашаюсь с <a href="#" target="_blank">обработкой персональных
+                                                данных</a>
+                                        </p>
+                                    </div>
+                                </label>
+
+                                <button class="btn form-submit" type="submit">Хочу стать участником</button>
+                            </form>
+                        </div>
                         <div class="main-btns">
                             <a href="#" class="main-btn" data-modal-btn="accreditation">Аккредитация СМИ / блогеров</a>
                             <a href="#" class="main-btn" data-modal-btn="speaker">Стать спикером</a>
@@ -140,6 +207,7 @@
                                     работу так, чтобы команды становились эффективнее.</div>
                             </div>
                         </div>
+                        <div class="on-mobile-btn btn" data-modal-btn="tickets">Принять участие</div>
                     </section>
 
                     <section class="healthy-section">
@@ -231,6 +299,7 @@
                                     с людьми и корпоративной культурой.</div>
                             </div>
                         </div>
+                        <div class="on-mobile-btn btn" data-modal-btn="tickets">Принять участие</div>
                     </section>
 
                 </div>
@@ -381,7 +450,7 @@
                 </div>
             </div>
         </section>
-        <section class="tickets">
+        <section class="tickets" id="tickets">
             <div class="container">
                 <div class="title-wrapper">
                     <h2 class="section-title">Билеты</h2>
@@ -410,7 +479,7 @@
                         <div class="border-wrapper">
                             <div class="ticket__head" style="background-color: #FFF;">
                                 Частный
-                                <span></span>
+                                <span>Для физических лиц</span>
                             </div>
                             <div class="ticket__body">
                                 <ul>
@@ -1410,7 +1479,15 @@
             В ближайшее время мы свяжемся с вами.
         </div>
     </div>
-
+    <div class="coockie-modal">
+        <div class="container">
+            <div class="coockie-modal__inner">
+                <p>Этот сайт использует файлы cookie. Продолжая использовать сайт, вы даёте своё согласие на работу с
+                    этими файлами.</p>
+                <div class="coockie-modal__btn">Принять и закрыть</div>
+            </div>
+        </div>
+    </div>
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/plyr.js"></script>

@@ -9,7 +9,12 @@ $('[data-toggle-item] .list-item__head').on('click', function () {
 
 const speakersSlider = new Swiper('.speakers-slider', {
     slidesPerView: 'auto',
-    spaceBetween: 40,
+    spaceBetween: 20,
+    breakpoints: {
+        768: {
+            spaceBetween: 40
+        },
+    },
     pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true,
@@ -30,7 +35,12 @@ window.addEventListener('scroll', (e) => {
 
 const partnersSlider = new Swiper('.partners-slider', {
     slidesPerView: 'auto',
-    spaceBetween: 40,
+    spaceBetween: 10,
+    breakpoints: {
+        768: {
+            spaceBetween: 40
+        },
+    },
     pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true,
@@ -122,7 +132,40 @@ document.addEventListener('click', (e) => {
     if (target.closest('.day-modal') && !target.closest('.day-modal__content') || target.closest('.day-modal__close')) {
         target.closest('.day-modal').classList.remove('show')
     }
+
+    if (target.closest('.mob-menu-btn')) {
+        document.querySelector('.mobile-menu')?.classList.add('show');
+    }
+    if (target.closest('.mobile-menu__close') || target.closest('.mobile-menu') && !target.closest('.mobile-menu__inner')) {
+        document.querySelector('.mobile-menu')?.classList.remove('show');
+    }
+
+    if (target.closest('.mobile-menu .header__link')) {
+        setTimeout(() => {
+            document.querySelector('.mobile-menu')?.classList.remove('show');
+        }, 100);
+    }
+
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+    const cookieModal = document.querySelector('.coockie-modal');
+    const acceptBtn = document.querySelector('.coockie-modal__btn');
+
+    if (localStorage.getItem('cookieAccepted') === 'true') {
+        cookieModal.style.display = 'none';
+    } else {
+        cookieModal.classList.add('show');
+    }
+
+    acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('cookieAccepted', 'true');
+        cookieModal.style.opacity = '0';
+        setTimeout(() => {
+            cookieModal.style.display = 'none';
+        }, 300);
+    });
+});
 
 const thanksModal = document.querySelector('.thanks-modal');
 
