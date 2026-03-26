@@ -603,6 +603,18 @@ body {
   text-align: center;
   font-family: Gilroy;
   font-weight: 500;
+  &:nth-child(4n + 1) {
+    background: rgba(250, 54, 219, 0.7) !important;
+  }
+  &:nth-child(4n + 2) {
+    background: rgba(143, 104, 237, 0.7) !important;
+  }
+  &:nth-child(4n + 3) {
+    background: rgba(110, 166, 239, 0.7) !important;
+  }
+  &:nth-child(4n + 4) {
+    background: rgba(115, 228, 229, 0.7) !important;
+  }
 }
 
 .speaker-slide__image {
@@ -957,7 +969,7 @@ body {
     left: 10px;
   }
   50% {
-    left: calc(100% - 153px);
+    left: 75%;
   }
   100% {
     left: 10px;
@@ -1762,6 +1774,7 @@ a.block-inner__val {
   }
   .timer-wrapper {
     flex-direction: column;
+    gap: 5px;
   }
   .title-wrapper {
     align-items: center;
@@ -1798,12 +1811,22 @@ a.block-inner__val {
   }
   .timer__num .num {
     font-size: 24px;
-    width: 46px;
+    width: 100%;
     height: 46px;
     border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .timer__nums {
+    width: 100%;
+  }
+  .timer__num {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(33.33% - 5.33333px);
   }
   .timer__num .text {
     font-size: 12px;
@@ -1992,6 +2015,10 @@ a.block-inner__val {
   }
   .programs {
     padding-top: 80px !important;
+    padding-bottom: 0;
+  }
+  .tickets {
+    padding-top: 80px;
   }
   .partners {
     padding-bottom: 0;

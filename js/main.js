@@ -145,7 +145,6 @@ document.addEventListener('click', (e) => {
             document.querySelector('.mobile-menu')?.classList.remove('show');
         }, 100);
     }
-
 })
 
 document.addEventListener("DOMContentLoaded", () => {
