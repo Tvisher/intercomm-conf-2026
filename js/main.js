@@ -22,14 +22,16 @@ const speakersSlider = new Swiper('.speakers-slider', {
 });
 
 const header = document.querySelector('.header');
-window.addEventListener('scroll', (e) => {
+const checkScroll = () => {
     const pageYOffcet = window.pageYOffset;
-    if (pageYOffcet >= header.clientHeight) {
+    if (pageYOffcet >= 10) {
         header.classList.add('shadow')
     } else {
         header.classList.remove('shadow')
     }
-})
+}
+checkScroll();
+window.addEventListener('scroll', checkScroll)
 
 
 
@@ -51,25 +53,13 @@ const player = new Plyr('#player', {
     controls: ['play-large']
 });
 
+const videoWrapper = document.getElementsByClassName("plyr__video-wrapper")[0];
+videoWrapper.addEventListener("click", event => {
+    player.togglePlay();
+    event.stopPropagation(); // Necessary or the video will toggle twice => no playback
+});
 
-// const countBlocks = document.querySelectorAll('.form-template__items-count');
-// countBlocks.forEach(block => {
-//     const minusBtn = block.querySelector('.calc__minus');
-//     const plusBtn = block.querySelector('.calc__plus');
-//     const plate = block.querySelector('.calc__plate');
-//     const updateCount = (delta) => {
-//         let count = parseInt(plate.dataset.count) || 0;
-//         count += delta;
-//         if (count < 0) count = 0;
-//         plate.textContent = count;
-//         plate.dataset.count = count;
-//         minusBtn.style.opacity = (count === 0) ? '0.3' : '1';
-//     };
-//     minusBtn.addEventListener('click', () => updateCount(-1));
-//     plusBtn.addEventListener('click', () => updateCount(1));
-//     updateCount(0);
-// });
-
+player.toggleControls(false);
 
 
 
